@@ -1,0 +1,714 @@
+body{
+    margin: 0;
+    padding: 0%;
+    background-color: #161212;
+}
+
+
+  .container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .topMenu{
+    position: absolute;
+    top: 0;
+   
+    width: 100%;
+    display: flex;
+   
+    align-items: center;
+   
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for visibility */
+    color: white;
+
+    z-index: 10; /* Ensure nav stays above other elements */
+  }
+ ul {
+    list-style: none;
+ 
+    margin: 0 auto;
+    padding: 0;
+
+  }
+
+ul li {
+    margin: 0 10px;
+    cursor: pointer;
+    
+  }
+ul li:hover {
+    text-decoration: underline;
+  }
+
+  #Profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  #contact {
+   
+    
+    margin:0 2vw;
+    font-size: 0.9rem;
+  }
+
+  #contact u {
+    cursor: pointer;
+  }
+
+  #contact u:hover {
+    color: orange;
+  }
+
+  .text-line {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem; /* Adjust font size as needed */
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Optional: shadow for better readability */
+  }
+
+  .text-top-left {
+    top: 10%;
+    left: 10px;
+  }
+
+  .text-middle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+.hero{
+   height:50vh;
+   width:100%;
+   
+  
+    border: solid salmon;
+    
+    padding: 0%;
+   
+ 
+}
+                                                                                .image-container {
+                                                                                   
+                                                                                    position: relative;
+                                                                                    display: inline-block;
+                                                                                    margin-top: 0%;
+                                                                                    width: 100%;
+                                                                                }
+
+                                                                                .image-container img {
+                                                                                    
+                                                                                    display: block;
+                                                                                    width: 100%; /* Adjust based on your design */
+                                                                                    height: auto;
+                                                                                }
+
+                                                                                .text-line {
+                                                                                    position: absolute;
+                                                                                    color: white;
+                                                                                    font-size: 1.5rem; /* Adjust font size as needed */
+                                                                                    font-weight: bold;
+                                                                                    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Optional: shadow for better readability */
+                                                                                }
+
+                                                                                .text-top-left {
+                                                                                    margin-top: 5%;
+                                                                                    margin-left: 5%;
+                                                                                  
+                                                                                   
+                                                                                }
+
+                                                                                .text-middle {
+                                                                                    top: 50%;
+                                                                                    left: 50%;
+                                                                                    transform: translate(-50%, 0);
+                                                                                }
+.backimage{
+    border: solid salmon;
+    display: flex;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+        object-fit: contain;
+        object-position: center;
+        width: 50vw;
+        height: 40vh;
+      
+}
+.side-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #0077ff;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+.menu-icon {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    margin: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    
+}
+ 
+.hero h1 {
+   color: white;   
+   font-family: 'Karma';
+   font-size: 40px;
+   font-weight: 100;
+   padding-left: 20%; /* Adjust this value to control how far from the left the h1 should be */
+   align-self: flex-start; /* Aligns the h1 to the start of the flex container */
+}
+.hero p {
+    color: #F4C95D;   
+    margin-bottom: 10px;
+    padding-bottom: 0%;
+    font-family: Katibeh;
+    font-size: 24px;
+    max-width: 40%;
+    text-align:center;
+ }
+#Profile{
+    display: flex;
+  
+    align-items: center;
+    font-family: 'Kumar One';
+    font-size: 22px;
+    color: #F4C95D;
+
+}
+.letterE{
+    font-size: 36px;
+   
+}
+.Logo{
+    font-family: 'Miss Fajardose';
+    font-size: 96px;
+    color: #F45DD3;
+}
+.Aboutmeh1{
+    align-self: center;
+    text-align: center;
+    text-decoration: underline;
+    color: aqua;
+    font-family: Acme;
+    margin-top: 0;
+    padding-top: 0;
+}
+.Aboutme {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: row;
+    gap: 3%;
+    margin-top: 0;
+    padding-top: 0;
+    color: white;
+}
+
+#profileImage {
+    width: 15vw;
+    height: 45vh;
+    overflow: hidden;
+    border: solid salmon;
+}
+
+#profileImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#ProfileDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+    border: solid purple;
+}
+
+.info-label {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+
+.info-data {
+    display: inline;
+}
+
+button {
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px; /* Adjusts spacing between text and button */
+}
+
+
+
+
+/* Styles for the outer container */
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background: linear-gradient(to top,rgb(0, 0, 0), rgb(0, 0, 0), rgb(7, 69, 255));
+    height: 90vh;
+    width: 80%;
+    margin-bottom: 5%;
+    overflow: hidden;
+}
+
+/* Styles for each row */
+.row {
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+   gap: 15%;
+    width: 100%;
+    height: 50%;
+}
+.box:hover{
+    transform: translateY(9px);
+    background: linear-gradient(to top, rgb(32, 96, 246), rgb(0, 0, 0), rgb(0, 0, 0));
+    filter: blur(100%);
+    border: solid rgb(2, 234, 255);
+    
+    scale: 1.01;
+    color: rgb(255, 255, 255);
+}
+
+/* Box styling */
+.box {
+    
+    
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 5%;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 0 ;
+    width: 100%;
+}
+
+.skills-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Style each skill line to align name and progress bar */
+.skill {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+    
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Progress bar styling */
+.progress-bar {
+    width: 70%; /* Adjust width as needed */
+    height: 15px;
+    
+    background-color: #3804f4;
+}
+
+/* Optional styling for headers */
+.skills-box h1 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+}
+
+/* Skill paragraph styling */
+.skills-box p {
+    margin: 0;
+    font-family: 'Abhaya Libre';
+    font-size: 15px;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    gap: 10px;
+}
+
+/* Align circle and line vertically */
+.circle-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Space between circle and line */
+}
+
+/* Circle with text styling */
+.circle-with-text {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between circle and text */
+}
+
+/* Circle styling */
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: #4caf50; /* Circle color */
+    border-radius: 50%;
+}
+
+/* Line styling */
+.line {
+    width: 2px;
+    height: 20px;
+    background-color: #0e9e89; /* Line color */
+    margin-left: 10px;
+}
+
+/* Text styling */
+.circle-with-text p {
+    margin: 0;
+}
+.p-class{
+    font-family: 'Abhaya Libre';
+   
+    color: white;
+    text-align: center;
+    line-height: 2;
+}
+p{ font-family: 'Abhaya Libre';
+}
+
+.outercontainer{
+    margin: 0;
+    perspective: 800px; /* Adds depth to the 3D effect */
+}
+.containercolored {
+    width: 15vw;
+    height: 35vh;
+   background-image:url(IMAGES/Screenshot.png) ;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth animation */
+   cursor: pointer;
+    
+}
+
+.containercolored:hover {
+   /* Tilt the container like a page */
+   transform:  rotateX(20deg) ;
+    
+}
+.h1-class{
+    margin-top: 30%; margin-left: 10%
+}
+.h1-class:hover {
+transform: scale(1.1); /* Adjust the scale value as needed */
+}
+
+h2:hover{
+    transform: scale(1.1); 
+}
+p:hover{
+    transform: scale(1.1); 
+}
+.large-rectangle1 {
+    border-radius: 10px;
+    width: 100%;
+    height: 65%; /* 3/4 of the container */
+    background-color: #050101; /* Light blue */
+    position: absolute;
+    bottom: 0;
+    color: aqua;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 10px 15px 3px #F50505; /* Glow effect */
+}
+.small-square1 {
+    border-radius: 10px;
+    width: 3vw;
+    height: 5vh;
+    background-color: #630091; /* Purple */
+    margin-left: 15%;
+    position: absolute;
+    top: -7%;
+    box-shadow: 5px 10px 20px 5px #f42c04; /* Glow effect */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.large-rectangle2 {
+    border-radius: 10px;
+    width: 100%;
+    height: 65%; /* 3/4 of the container */
+    background-color: #050101; /* Light blue */
+    position: absolute;
+    bottom: 0;
+    color: aqua;
+    
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 10px 15px 3px #50f404; /* Glow effect */
+}
+.small-square2 {
+    border-radius: 10px;
+    width: 3vw;
+    height: 5vh;
+    background-color: #630091; /* Purple */
+    margin-left: 15%;
+    position: absolute;
+    top: -7%;
+    box-shadow: 5px 10px 20px 5px #50f404; /* Glow effect */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.large-rectangle3 {
+    border-radius: 10px;
+    width: 100%;
+    height: 75%; /* 3/4 of the container */
+    background-color: #050101; /* Light blue */
+    position: absolute;
+    bottom: 0;
+    color: aqua;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 10px 15px 3px #f4d804; /* Glow effect */
+}
+.small-square3 {
+    border-radius: 10px;
+    width: 3vw;
+    height: 5vh;
+    background-color: #630091; /* Purple */
+    margin-left: 15%;
+    position: absolute;
+    top: -7%;
+    box-shadow: 5px 10px 20px 5px #f4d804; /* Glow effect */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.large-rectangle4 {
+    border-radius: 10px;
+    width: 100%;
+    height: 75%; /* 3/4 of the container */
+    background-color: #050101; /* Light blue */
+    position: absolute;
+    bottom: 0;
+    color: aqua;
+    
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 10px 15px 3px #f404a8; /* Glow effect */
+}
+.small-square4 {
+    border-radius: 10px;
+    width: 3vw;
+    height: 5vh;
+    background-color: #630091; /* Purple */
+    margin-left: 15%;
+    position: absolute;
+    top: -7%;
+    box-shadow: 5px 10px 20px 5px #f404a8; /* Glow effect */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.large-rectangle5 {
+    border-radius: 10px;
+    width: 100%;
+    height: 75%; /* 3/4 of the container */
+    background-color: #050101; /* Light blue */
+    position: absolute;
+    bottom: 0;
+    color: aqua;
+    
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 10px 15px 3px #04ccf4; /* Glow effect */
+}
+.small-square5 {
+    border-radius: 10px;
+    width: 3vw;
+    height: 5vh;
+    background-color: #630091; /* Purple */
+    margin-left: 15%;
+    position: absolute;
+    top: -7%;
+    box-shadow: 5px 10px 20px 5px #04ccf4; /* Glow effect */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.large-rectangle6 {
+    border-radius: 10px;
+    width: 100%;
+    height: 75%; /* 3/4 of the container */
+    background-color: #050101; /* Light blue */
+    position: absolute;
+    bottom: 0;
+    color: aqua;
+    
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 10px 15px 3px #9c04f4; /* Glow effect */
+}
+.small-square6 {
+    border-radius: 10px;
+    width: 3vw;
+    height: 5vh;
+    background-color: #630091; /* Purple */
+    margin-left: 15%;
+    position: absolute;
+    top: -7%;
+    box-shadow: 5px 10px 20px 5px #9c04f4; /* Glow effect */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Responsive styling */
+@media only screen and (max-width: 968px) {
+    .hero {
+        background-size: contain;
+       
+       
+    }
+    .h1-class{
+        margin-top: 50%;
+        margin-left: 10%;
+        font-size: 0.7rem;
+    }
+    .Aboutmeh1{
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    .hero h1 {
+        font-size: 15px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+     }
+     .hero p {
+        margin-top: 0;
+        padding-top: 0;
+         font-size: 12px;
+         max-width: 50%;
+         text-align:center;
+        
+      }
+e    .Logo {
+        font-family: 'Miss Fajardose';
+        font-size: 16px;
+        color: #eded06;
+        position: fixed;
+        left: 35%;
+        top: 0;
+    }
+    .menu-icon {
+        position: absolute;
+        display: block; /* Show the menu icon on small screens */
+        z-index: 5;
+    }
+    .topMenu{display: none;}
+    .side-menu {
+        display: block; /* Display side menu when toggled */
+     
+    }
+    .backimage{
+        z-index: -1;
+        margin: 0;
+        padding: 0;
+        object-fit: contain;
+        height: 100%;
+   
+    }
+    .containercolored {
+        width: 17vw;
+        height: 20vh; 
+    }
+    .outer-container {
+       
+        height: 60vh;
+        width: 90%;
+       
+    }
+    .text-line {
+       
+        font-size: 0.5rem; /* Adjust font size as needed */
+        font-weight: lighter;
+       
+    }
+
+    .text-top-left {
+        margin-top: 5%;
+        margin-left: 5%;
+      
+        font-size: 1rem; /* Adjust font size as needed */
+    }
+
+    .text-middle {
+        font-size: 1rem; /* Adjust font size as needed */
+    }
+    #profileImage {
+        min-width: 150px;
+        min-height: 45vh;
+        overflow: hidden;
+        border: solid salmon;
+    }
+    .icons-class{
+        width: 7vw;
+        height: 3vh;
+    }
+}
+/* Hide .pp-class on laptop-sized screens */
+@media (min-width: 0px) and (max-width: 1540px) {
+    .pp-class {
+        display: none;
+    }
+}
