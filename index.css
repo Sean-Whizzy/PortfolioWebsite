@@ -712,3 +712,11 @@ e    .Logo {
         display: none;
     }
 }
+@media (min-width: 0px) and (max-width: 300px) {
+    .text-line {
+        display: none;
+        color: rgb(156, 24, 24);
+        font-size: 0.5rem; /* Adjust font size as needed */
+      }
+}
+
