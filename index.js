@@ -8,3 +8,10 @@ function toggleMenu() {
         sideMenu.style.display = "block";
     }
 }
+document.getElementById('menuIcon').addEventListener('click', function() {
+    this.classList.toggle('active');
+});
+function toggleMenu() {
+    var sideMenu = document.getElementById('sideMenu');
+    sideMenu.classList.toggle('active');
+}
