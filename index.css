@@ -4,7 +4,8 @@ body{
     background-color: #161212;
 }
 
-
+.topMenu2{
+    display: none;}
   .container img {
     width: 100%;
     height: auto;
@@ -14,12 +15,9 @@ body{
   .topMenu{
     position: absolute;
     top: 0;
-   
     width: 100%;
     display: flex;
-   
     align-items: center;
-   
     background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for visibility */
     color: white;
 
@@ -88,7 +86,7 @@ ul li:hover {
    width:100%;
    
   
-    border: solid salmon;
+   
     
     padding: 0%;
    
@@ -130,7 +128,7 @@ ul li:hover {
                                                                                     transform: translate(-50%, 0);
                                                                                 }
 .backimage{
-    border: solid salmon;
+    
     display: flex;
     z-index: -1;
     margin: 0;
@@ -217,7 +215,7 @@ ul li:hover {
     width: 15vw;
     height: 45vh;
     overflow: hidden;
-    border: solid salmon;
+    
 }
 
 #profileImage img {
@@ -232,7 +230,7 @@ ul li:hover {
     align-items: center;
     text-align: center;
     max-width: 500px;
-    border: solid purple;
+    
 }
 
 .info-label {
@@ -316,7 +314,10 @@ button {
     width: 100%;
     height: 100%;
 }
-
+.side-menu{
+    
+    display: none;
+}
 
 /* Style each skill line to align name and progress bar */
 .skill {
@@ -360,12 +361,7 @@ button {
 }
 
 /* Align circle and line vertically */
-.circle-line {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px; /* Space between circle and line */
-}
+
 
 /* Circle with text styling */
 .circle-with-text {
@@ -436,8 +432,9 @@ transform: scale(1.1); /* Adjust the scale value as needed */
 h2:hover{
     transform: scale(1.1); 
 }
+p{padding: 5px;}
 p:hover{
-    transform: scale(1.1); 
+    transform: scale(0.95); 
 }
 .large-rectangle1 {
     border-radius: 10px;
@@ -647,7 +644,10 @@ e    .Logo {
         display: block; /* Show the menu icon on small screens */
         z-index: 5;
     }
-    .topMenu{display: none;}
+    .topMenu{
+        display: none;
+    }
+    .topMenu2{display:block;height: 5vh;background-color: orange;width: 100%;}
     .side-menu {
         display: none; /* Display side menu when toggled */
      
@@ -691,12 +691,13 @@ e    .Logo {
         min-width: 150px;
         min-height: 45vh;
         overflow: hidden;
-        border: solid salmon;
+        
     }
     .icons-class{
         width: 7vw;
         height: 3vh;
     }
+    .pp-class {padding: auto   ;}
 }
 /* Hide .pp-class on laptop-sized screens */
 @media (min-width: 0px) and (max-width: 1540px) {
@@ -827,5 +828,65 @@ e    .Logo {
         }
          
      
+    }@media (min-width: 240px) and (max-width: 300px) {
+        .text-middle {
+            font-size: 0.5rem; /* Adjust font size as needed */
+           
+        }
+      
+        .Aboutmeh1 {
+            font-family: 'ABeeZee';
+            font-size: 0.6rem !important; /* Force the font size to 0.5rem */
+        }
+        .p-class{
+          
+           font-size: 0.3rem !important;
+            
+            line-height: 1;
+        }
+        .h1-class{
+            margin-top: 50%;
+            margin-left: 10%;
+            font-size: 0.5rem;
+        }
+    h2{
+        font-size: 0.9rem;
     }
+    h3{
+        font-size: 0.7rem;
+    }
+    p{
+        font-size: 0.5rem !important;
+    }
+    .circle-with-text {
+      
+        gap: 5px; /* Space between circle and text */
+    }
+    .circle {
+        width: 10px;
+        height: 10px;
+       margin-top: 0;
+       margin-bottom: 0;
+       padding: 0;
+    }
+    
+    /* Line styling */
+    .line {
+       
+        width: 2px;
+        height: 10px;
+        margin-left: 4px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+    }
+.text-top-left {
+    top: 6%;
+    left: 10px;
+  }
+  .container {
+  
+    gap: 0px;
+}
 
+}
