@@ -403,6 +403,7 @@ p{ font-family: 'Abhaya Libre';
 .outercontainer{
     margin: 0;
     perspective: 800px; /* Adds depth to the 3D effect */
+    background-color: gra;
 }
 .containercolored {
     width: 15vw;

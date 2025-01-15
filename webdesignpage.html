@@ -1,0 +1,350 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            .gradient-text {
+      font-size: 2.5em;
+      font-weight: bold;
+      text-align: center;
+      background: linear-gradient(45deg, #ff6f61, #6a11cb, #2575fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+        body{
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+        }
+        .Maindiv{
+            display: flex;
+            flex-direction: column;
+           
+        }
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+
+    background-color: #000000;
+  }
+  /* Big Rectangle (Main Container) */
+  .big-rectangle {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin:0;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+  }
+  
+  .left-arrow {
+    left: 20px;
+  }
+  
+  .right-arrow {
+    right: 20px;
+  }
+  
+  /* Smaller Rectangle for the Carousel */
+  .carousel-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 70%;
+    height: 120px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  /* Carousel */
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+  }
+  
+  /* Slide Items */
+  .slide {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  /* Active Slide */
+  .slide.active {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
+  /* Carousel Container Shadow */
+  .carousel-container::before,
+  .carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+    z-index: 1;
+  }
+  
+  .carousel-container::after {
+    right: 0;
+    transform: scaleX(-1);
+  }
+  .container {
+      margin: 4% auto;
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      transform: translate(-50%, -50%);
+      animation: rotate 10s linear infinite;
+    }
+
+    .orbit .circle {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: #ff9900;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      transform-origin: center;
+    }
+.circle:hover{ background: linear-gradient(45deg, #ff6f61, #6a11cb, #2575fc);}
+    .circle:nth-child(1) { top: 0; left: 50%; transform: translate(-50%, -50%) rotate(0deg); }
+    .circle:nth-child(2) { top: 15%; left: 85%; transform: translate(-50%, -50%) rotate(0deg); }
+    .circle:nth-child(3) { top: 50%; left: 100%; transform: translate(-50%, -50%) rotate(0deg); }
+    .circle:nth-child(4) { top: 85%; left: 85%; transform: translate(-50%, -50%) rotate(0deg); }
+    .circle:nth-child(5) { top: 100%; left: 50%; transform: translate(-50%, -50%) rotate(0deg); }
+    .circle:nth-child(6) { top: 85%; left: 15%; transform: translate(-50%, -50%) rotate(0deg); }
+    .circle:nth-child(7) { top: 50%; left: 0; transform: translate(-50%, -50%) rotate(0deg); }
+    .circle:nth-child(8) { top: 15%; left: 15%; transform: translate(-50%, -50%) rotate(0deg); }
+
+    @keyframes rotate {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .orbit .circle {
+      animation: keep-upright 10s linear infinite;
+    }
+
+    @keyframes keep-upright {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(-360deg); }
+    }
+    .slideshow {
+      
+   
+      overflow: hidden;
+    }
+
+    .slideshow img {
+      overflow: hidden;
+      object-fit: contain;
+      opacity: 0;
+      transition: opacity 1s ease-in-out; /* Smooth fade transition */
+    }
+
+    .slideshow img.active {
+      opacity: 1;
+    }
+    </style>
+</head>
+<body>
+    <div class="Maindiv">
+      <div style="background-color: #382f24;width: 100%;height: 3.5vh;color: rgb(0, 0, 0);display: flex;align-items: center;justify-content: center;"><h2 >WEB DESIGN SERVICES Page</h2></div>
+        <div class="Div1" style="flex: 1;display: flex;flex-direction: row; background-color: rgb(0, 0, 0);max-height: 50vh; ">
+         
+                        <div class="graduationpics slideshow" style="flex: 1;justify-content: center;display: flex;">
+                <img src="IMAGES/graduate1.jpg" alt="Image 1" class="slideshow-image">
+                <img src="IMAGES/silhouette-graduation-student-white-background_876282-4083.jpg" alt="Image 2" class="slideshow-image">
+                <img src="IMAGES/download.jpeg" alt="Image 3" class="slideshow-image" >
+            </div>
+            
+           <div style=" color: white;display: flex;flex-direction: column;padding: 3%;flex: 1;">
+            <div style="font-size: 1.0rem;">
+          <h1><span style="color: orange;">Certified</span> <span class="gradient-text">Web Designer</span>, with Pofessional skills in the
+           <span class="gradient-text">D</span>ESIGN WORLD</h1></div>
+                <div style="font-size: 0.9rem;justify-content: center;display: flex; margin-top: 2%;text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">
+                  <li style="background-color: #f77f00; border-radius: 20px;padding: 1%;margin: 1%;">Bachelor’s Degree in Software Engineering</li>
+
+                   <li  style="background-color: #f77f00; border-radius: 20px;padding: 1%;margin: 1%;"> Google UX Design Professional Certificate (Coursera)</li>
+            
+                  <li  style="background-color: #f77f00; border-radius: 20px;padding: 1%;margin: 1%;">Adobe Certified Professional (ACP) in Web Design</li>
+            
+                <li  style="background-color: #f77f00; border-radius: 20px;padding: 1%;margin: 1%;">HubSpot Academy – Web Design Certification</li>
+                </div>
+                <div style="font-size: 0.6rem; text-align: center;margin-top: 5%;"><h2>iContact me and let’s create you 
+                an amazing and futurstic website:</h2></div>
+                <div style="margin: 0 auto;font-size: 0.9rem;margin-bottom: 0%;color: #fda102;">
+                   
+                        <li>linkedIn: Eric Kimtai</li>
+                            <li>fiver:</li>
+                                <li>upwork: Username: Sean Alkaline OR seanalkaline2@gmail.com </li>
+                                    <li>github: Sean Alkaline OR Sean_Whizzy </li>
+                               </div></div></div>
+        <div class="Div2" style="flex: 1; ;display: flex;flex-direction: row; border: solid orange;">
+            <div style="display: flex;align-items: center;flex: 1;border-top-right-radius: 50px;background-color: #f77f00;border-bottom-right-radius: 50px;">
+            <h1 style="padding: 5%;font-size: large;color: white;">I am a professional Web Designer, with great skills in the DESIGN WORLD</h1></div>
+            
+            <div style="flex: 1;display: flex;justify-content: center;background-color: #000000;"><img style="height: 100%;" src="IMAGES/imagedeskfoto.jpg" alt=""></div></div>
+       
+       <div class="Divmiddle" style="background-color: #1b3e4a;"><div class="container">
+        <div class="center"><img src="IMAGES/OIP (2).PNG" alt=""></div>
+        <div class="orbit">
+          <div class="circle">CSS</div>
+          <div class="circle">HTML</div>
+          <div class="circle">THREE.JS</div>
+          <div class="circle">VUE</div>
+          <div class="circle">REACT</div>
+          <div class="circle" style="color: black;">JAVASCRIPT</div>
+          <div class="circle">PYTHON</div>
+          <div class="circle">DESIGN</div>
+        </div>
+      </div></div>
+       
+       
+        <div class="Div3" >
+            <div class="big-rectangle">
+                <div class="arrow left-arrow" id="leftArrow">&#9664;</div> <!-- Left Arrow -->
+                <div class="carousel-container">
+                  <div class="carousel">
+                    <!-- Slideshow items -->
+                    <div class="slide active" style="background-image: url('IMAGES/Screenshot.png');"></div>
+                    <div class="slide" style="background-image: url('green.jpg');"></div>
+                    <div class="slide" style="background-image: url('IMAGES/mountains1.png');"></div>
+                    <div class="slide" style="background-image: url('IMAGES/Screenshot.png');"></div>
+                    <div class="slide" style="background-image: url('IMAGES/green.jpg');"></div>
+                  </div>
+                </div>
+                <div style="margin: 0 auto;"><h1 style="font-size: 100px;color: white;">UPDATES COMING SOON</h1></div>
+                <div class="arrow right-arrow" id="rightArrow">&#9654;</div> <!-- Right Arrow -->
+              </div>
+    </div>
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const leftArrow = document.getElementById('leftArrow');
+        const rightArrow = document.getElementById('rightArrow');
+        const bigRectangle = document.querySelector('.big-rectangle');
+        
+        let currentIndex = 0;
+        
+        function updateCarousel() {
+          // Update active slide and background
+          slides.forEach((slide, index) => {
+            slide.classList.remove('active');
+            if (index === currentIndex) {
+              slide.classList.add('active');
+              bigRectangle.style.backgroundImage = slide.style.backgroundImage;
+            }
+          });
+        
+          // Adjust carousel position
+          const carousel = document.querySelector('.carousel');
+          carousel.style.transform = `translateX(-${currentIndex * 120}px)`; // 120px is the width + gap
+        }
+        
+        leftArrow.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+          updateCarousel();
+        });
+        
+        rightArrow.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % slides.length;
+          updateCarousel();
+        });
+        
+        // Initialize the carousel
+        updateCarousel();
+        </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.graduationpics .slideshow-image');
+    const totalImages = images.length;
+
+    // Ensure the first image is visible initially
+    images[currentIndex].classList.add('active');
+
+    function showNextImage() {
+        images[currentIndex].classList.remove('active'); // Hide current image
+        currentIndex = (currentIndex + 1) % totalImages; // Move to the next image
+        images[currentIndex].classList.add('active'); // Show next image
+    }
+
+    setInterval(showNextImage, 5000); // Change image every 5 seconds
+});
+
+
+
+</script>
+</body>
+</html>
